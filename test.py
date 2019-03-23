@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 #Setup the path to local ip (port = 1234)
-path = 'http://127.0.0.1:1234/ecobin'
+path = 'localhost:8888/ecobin'
 
 #Get method (returns a dictionary)
 def get_data():
@@ -15,7 +15,7 @@ def get_data():
 #Post/updating the dictionary in the server
 def post_data(x):
     #Adjust path
-    path = 'http://127.0.0.1:1234/ecobin/'+ x
+    path = 'localhost:8888/ecobin/'+ x
     #Process picture
     image = Image.open('trash.jpg')
     np_im = np.array(image)
